@@ -36,3 +36,30 @@ function solution(image) {
     }
     return blurred
 }
+
+// minesweeper
+function solution(matrix) {
+    var lineArray = [];
+    var arrayContainer = [];
+    var counter = 0
+    for (var i = 0; i < matrix.length; i++) {
+        for (var j = 0; j < matrix[i].length; j++) {
+            for (var y = -1; y < 2; y++) {
+                for (var x = -1; x < 2; x++) {
+                    if ((i + y) < 0 || (x + j) < 0 || (i + y) >= matrix.length || (x + j) >= matrix[i].length) {
+                        continue
+                    } else if (y === 0 && x === 0) {
+                        continue
+                    }else if (matrix[i + y][j + x] === true) {
+                        counter++
+                    }
+                }
+            }
+            lineArray.push(counter)
+            counter = 0;
+        }
+        arrayContainer.push(lineArray);
+        lineArray = [];
+    }
+    return arrayContainer;
+}
