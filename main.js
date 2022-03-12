@@ -73,3 +73,14 @@ function solution(inputArray, elemToReplace, substitutionElem) {
     }
     return inputArray
 }
+
+//evenDigitsOnly
+function solution(n) {
+    var num = n.toString()
+    for (var i = 0; i < num.length; i++) {
+        if (num[i] % 2 !== 0) {
+            return false;
+        }
+    }
+    return true;
+}
