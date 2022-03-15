@@ -84,3 +84,19 @@ function solution(n) {
     }
     return true;
 }
+
+// variableName
+function solution(name) {
+    if (!isNaN(parseInt(name[0]))) {
+        return false;
+    }
+    for (var i = 0; i < name.length; i++) {
+        if ((name.charCodeAt(i) > 64 && name.charCodeAt(i) < 91) || (name.charCodeAt(i) > 96 && name.charCodeAt(i) < 122) ||
+        (name.charCodeAt(i) === 95) || (name.charCodeAt(i) > 47 && name.charCodeAt(i) < 58)) {
+            continue
+        } else {
+            return false
+        }
+    }
+    return true;
+}
