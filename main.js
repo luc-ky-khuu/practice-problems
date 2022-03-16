@@ -146,3 +146,24 @@ function solution(deposit, rate, threshold) {
     }
     return year;
 }
+
+// absoluteValuesSumMinimization
+function solution(a) {
+    let lowestSum = 0;
+    let currentSum = 0;
+    let index = 0;
+    for (let i = 0; i < a.length; i++) {
+        for (let x = 0; x < a.length; x++) {
+            currentSum += (Math.abs(a[x] - a[i]))
+        }
+        if (i === 0) {
+            lowestSum = currentSum
+        }
+        if (currentSum < lowestSum) {
+            lowestSum = currentSum;
+            index = i;
+        }
+        currentSum = 0;
+    }
+    return a[index]
+}
