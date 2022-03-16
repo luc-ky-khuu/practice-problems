@@ -114,3 +114,15 @@ function solution(inputString) {
     }
     return newString
 }
+
+// chessBoardCellColor
+function solution(cell1, cell2) {
+    let c1 = cell1.charCodeAt(0)
+    let c2 = cell2.charCodeAt(0)
+    let c1Value = c1 + parseInt(cell1[1])
+    let c2Value = c2 + parseInt(cell2[1]);
+    if ((c1Value % 2) === (c2Value % 2)) {
+        return true;
+    }
+    return false;
+}
