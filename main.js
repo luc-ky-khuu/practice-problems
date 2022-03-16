@@ -126,3 +126,12 @@ function solution(cell1, cell2) {
     }
     return false;
 }
+
+//Circle of Numbers
+function solution(n, firstNumber) {
+    const half = n / 2;
+    if (firstNumber < half) {
+        return firstNumber += half
+    }
+    return firstNumber -= half
+}
