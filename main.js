@@ -100,3 +100,17 @@ function solution(name) {
     }
     return true;
 }
+
+// alphabeticShift
+function solution(inputString) {
+    let newString = '';
+    for (let i = 0; i < inputString.length; i++) {
+        let charCode = inputString.charCodeAt(i);
+        charCode++;
+        if (charCode === 123) {
+            charCode = 97;
+        }
+        newString += String.fromCharCode(charCode)
+    }
+    return newString
+}
