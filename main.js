@@ -135,3 +135,14 @@ function solution(n, firstNumber) {
     }
     return firstNumber -= half
 }
+
+// depositProfit
+function solution(deposit, rate, threshold) {
+    let amount = deposit;
+    let year = 0;
+    while (amount < threshold) {
+        amount += (amount * (rate / 100))
+        year++;
+    }
+    return year;
+}
