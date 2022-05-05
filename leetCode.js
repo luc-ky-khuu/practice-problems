@@ -40,3 +40,33 @@ var containsDuplicate = function (nums) {
   }
   return false;
 };
+
+//Valid Parentheses
+var isValid = function (s) {
+  let arr = [s[0]];
+  for (let i = 1; i < s.length; i++) {
+    let last = arr.length - 1
+    if (s[i] === '}') {
+      if (arr[last] !== '{') {
+        return false
+      }
+      arr.pop();
+    } else if (s[i] === ']') {
+      if (arr[last] !== '[') {
+        return false
+      }
+      arr.pop();
+    } else if (s[i] === ')') {
+      if (arr[last] !== '(') {
+        return false
+      }
+      arr.pop();
+    } else {
+      arr.push(s[i]);
+    }
+  }
+  if (arr.length > 0) {
+    return false
+  }
+  return true;
+};
