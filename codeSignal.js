@@ -205,3 +205,26 @@ function solution(inputString) {
     }
     return true
 }
+
+// buildPalindrome
+function solution(st) {
+    let reversed = '';
+    for (let i = (st.length - 1); i >=0; i--) {
+        reversed += st[i]
+    }
+    let len = st.length
+    let lastIndex = st.length - 1
+
+    for (let i = 0; i < len; i++) {
+        if (st === reversed) {
+            return reversed
+        }
+        let first = reversed.slice(0, i);
+        let second = reversed.slice(i);
+        reversed = first + st[i] + second;
+        let firstSt = st.slice(0,len);
+        let secondSt = st.slice(len);
+        st = firstSt + st[i] + secondSt
+    }
+    return reversed
+}
