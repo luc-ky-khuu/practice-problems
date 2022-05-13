@@ -226,3 +226,11 @@ function solution(st) {
     }
     return reversed
 }
+
+// isDigit
+function solution(symbol) {
+    if (Number(symbol) || symbol == 0) {
+        return true;
+    }
+    return false
+}
