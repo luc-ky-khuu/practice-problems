@@ -213,8 +213,6 @@ function solution(st) {
         reversed += st[i]
     }
     let len = st.length
-    let lastIndex = st.length - 1
-
     for (let i = 0; i < len; i++) {
         if (st === reversed) {
             return reversed
