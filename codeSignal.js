@@ -167,3 +167,22 @@ function solution(a) {
     }
     return a[index]
 }
+
+// Election Winners
+function solution(votes, k) {
+    const max = Math.max(...votes);
+    let count = 0;
+    const maxArr = [];
+    for (let i = 0; i < votes.length; i++) {
+        if ((votes[i] + k) > max) {
+            count++
+        }
+        if (votes[i] === max) {
+            maxArr.push(votes[i]);
+        }
+    }
+    if (count === 0 && maxArr.length === 1) {
+        count++
+    }
+    return count
+}
