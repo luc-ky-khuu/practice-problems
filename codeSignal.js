@@ -186,3 +186,22 @@ function solution(votes, k) {
     }
     return count
 }
+
+// Is Mac48 Address
+function solution(inputString) {
+    const arr = inputString.split('-');
+    if (arr.length !== 6) {
+        return false
+    }
+    for (let i = 0; i < 6; i++) {
+        if (arr[i].length !== 2) {
+            return false
+        }
+        const nums = /[0-9]/g;
+        const letters = /[A-F]/g;
+        if ((!arr[i][0].match(nums) && !arr[i][0].match(letters)) || (!arr[i][1].match(nums) && !arr[i][1].match(letters))) {
+            return false
+        }
+    }
+    return true
+}
