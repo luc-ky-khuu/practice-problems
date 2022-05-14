@@ -234,3 +234,27 @@ function solution(symbol) {
     }
     return false
 }
+
+// lineEncoding
+function solution(s) {
+    let sameLetters = s[0];
+    let arr = [];
+    for (let i = 1; i < s.length; i++) {
+        if (s[i] === sameLetters[0]) {
+            sameLetters += s[i]
+        } else {
+            arr.push(sameLetters);
+            sameLetters = s[i];
+        }
+    }
+    arr.push(sameLetters);
+    let result = '';
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].length < 2) {
+            result += `${arr[i][0]}`
+        } else {
+            result += `${arr[i].length}${arr[i][0]}`
+        }
+    }
+    return result
+}
