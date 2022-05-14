@@ -258,3 +258,33 @@ function solution(s) {
     }
     return result
 }
+
+// chessKnight
+function solution(cell) {
+    let maxMoves = 8;
+    let first = cell.charCodeAt(0)
+    if (first === 97 || first === 104) {
+        if (cell[1] === '1' || cell[1] === '8') {
+            maxMoves -= 6
+        } else if (cell[1] === '2' || cell[1] === '7') {
+            maxMoves -= 5
+        } else {
+            maxMoves -= 4
+        }
+    } else if (first === 98 || first === 103) {
+        if (cell[1] === '1' || cell[1] === '8') {
+            maxMoves -= 5
+        } else if (cell[1] === '2' || cell[1] === '7') {
+            maxMoves -= 4
+        } else {
+            maxMoves -= 2
+        }
+    } else {
+        if (cell[1] === '1' || cell[1] === '8') {
+            maxMoves -= 4
+        } else if (cell[1] === '2' || cell[1] === '7') {
+            maxMoves -= 2
+        }
+    }
+    return maxMoves
+}
