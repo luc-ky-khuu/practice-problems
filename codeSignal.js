@@ -303,3 +303,26 @@ function solution(n) {
     }
     return parseInt(max)
 }
+
+// longestWord
+function solution(text) {
+    let words = [];
+    let lowerText = text.toLowerCase()
+    let tempWord = '';
+    for (let x = 0; x < text.length; x++) {
+        if (lowerText.charCodeAt(x) >= 97 && lowerText.charCodeAt(x) <= 122) {
+            tempWord += text[x];
+        } else {
+            words.push(tempWord);
+            tempWord = ''
+        }
+    }
+    words.push(tempWord)
+    let longestWord = '';
+    for (let i = 0; i < words.length; i++) {
+        if (words[i].length > longestWord.length) {
+            longestWord = words[i]
+        }
+    }
+    return longestWord
+}
