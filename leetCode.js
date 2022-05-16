@@ -91,3 +91,30 @@ var isPalindrome = function (s) {
   }
   return false
 };
+
+// isAnagram
+var isAnagram = function (s, t) {
+  if (s.length !== t.length) {
+    return false
+  }
+  const obj = {};
+  const obj2 = {};
+  for (let i = 0; i < s.length; i++) {
+    if (obj[s[i]] === undefined) {
+      obj[s[i]] = 1
+    } else {
+      obj[s[i]] = obj[s[i]] += 1
+    }
+    if (obj2[t[i]] === undefined) {
+      obj2[t[i]] = 1
+    } else {
+      obj2[t[i]] = obj2[t[i]] += 1
+    }
+  }
+  for (const key in obj) {
+    if (obj[key] !== obj2[key]) {
+      return false
+    }
+  }
+  return true
+};
