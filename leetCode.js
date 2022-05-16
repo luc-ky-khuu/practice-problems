@@ -70,3 +70,24 @@ var isValid = function (s) {
   }
   return true;
 };
+
+// isPalindrome
+var isPalindrome = function (s) {
+  if (s.length < 2) {
+    return true
+  }
+  const lowerString = s.toLowerCase();
+  let forward = '';
+  let reverse = '';
+  for (let i = 0; i < lowerString.length; i++) {
+    if ((lowerString.charCodeAt(i) >= 97 && lowerString.charCodeAt(i) <= 121) ||
+      (lowerString.charCodeAt(i) >= 48 && lowerString.charCodeAt(i) <= 57)) {
+      forward += lowerString[i];
+      reverse = lowerString[i] + reverse;
+    }
+  }
+  if (forward === reverse) {
+    return true;
+  }
+  return false
+};
