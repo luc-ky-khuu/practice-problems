@@ -288,3 +288,18 @@ function solution(cell) {
     }
     return maxMoves
 }
+
+// deleteDigit
+function solution(n) {
+    let max = 0;
+    const x = n.toString()
+    const y = x.split('');
+    for (let i = 0; i < y.length; i++) {
+        let num = [...y]
+        num.splice(i, 1);
+        if (parseInt(num.join('')) > max) {
+            max = num.join('')
+        }
+    }
+    return parseInt(max)
+}
