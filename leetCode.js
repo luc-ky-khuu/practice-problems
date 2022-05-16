@@ -118,3 +118,17 @@ var isAnagram = function (s, t) {
   }
   return true
 };
+
+// Binary Search
+var search = function (nums, target) {
+  let half = Math.ceil(nums.length / 2);
+  for (let i = 0; i < half; i++) {
+    if (nums[i] === target) {
+      return i;
+    }
+    if (nums[i + half] === target) {
+      return i + half;
+    }
+  }
+  return -1
+};
