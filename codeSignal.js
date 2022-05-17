@@ -355,3 +355,23 @@ function solution(time) {
     }
     return true
 }
+
+// sumUpNumbers
+function solution(inputString) {
+    let sum = 0;
+    let num = ''
+    for (let i = 0; i < inputString.length; i++) {
+        if (Number(inputString[i]) || inputString[i] === '0') {
+            num += inputString[i];
+        } else {
+            if (num === '') {
+                continue;
+            } else {
+                sum += Number(num);
+                num = '';
+            }
+        }
+    }
+    sum += Number(num);
+    return sum
+}
