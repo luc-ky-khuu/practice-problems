@@ -343,3 +343,15 @@ function checkLongestString(inputArray) {
     }
     return arrContainer;
 }
+
+// valid time
+function solution(time) {
+    const splitTime = time.split(':');
+    if (parseInt(splitTime[0]) > 24 || parseInt(splitTime[1]) > 59) {
+        return false;
+    }
+    if (parseInt(splitTime[0]) === 24) {
+        return false;
+    }
+    return true
+}
