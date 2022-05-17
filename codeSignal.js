@@ -326,3 +326,20 @@ function solution(text) {
     }
     return longestWord
 }
+
+// checkLongestString
+function checkLongestString(inputArray) {
+    let longestLength = 0;
+    const arrContainer = [];
+    for (let i = 0; i < inputArray.length; i++) {
+        if (inputArray[i].length > longestLength) {
+            longestLength = inputArray[i].length;
+        }
+    }
+    for (let i = 0; i < inputArray.length; i++) {
+        if (inputArray[i].length === longestLength) {
+            arrContainer.push(inputArray[i]);
+        }
+    }
+    return arrContainer;
+}
