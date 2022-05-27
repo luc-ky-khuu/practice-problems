@@ -1,3 +1,16 @@
+// firstDuplicate
+function solution(a) {
+    const obj = {};
+    for (let i = 0; i < a.length; i++) {
+        if (obj[a[i]]) {
+            return a[i]
+        } else {
+            obj[a[i]] = 1
+        }
+    }
+    return -1
+}
+
 // avoidObstacles
 function solution(inputArray) {
     var counter = 1;
