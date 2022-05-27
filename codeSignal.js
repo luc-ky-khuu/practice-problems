@@ -1,3 +1,17 @@
+// rotateImage
+function solution(a) {
+    const newImage = []
+    let row = []
+    for (let i = 0; i < a.length; i++) {
+        for (let x = 0; x < a.length; x++) {
+            row.push(a[(a.length - 1) - x][i])
+        }
+        newImage.push(row);
+        row = [];
+    }
+    return newImage
+}
+
 // firstNotRepeatingCharacter
 function solution(s) {
     const obj = {};
@@ -15,7 +29,6 @@ function solution(s) {
     }
     return '_'
 }
-
 
 // firstDuplicate
 function solution(a) {
