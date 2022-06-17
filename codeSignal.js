@@ -1,3 +1,15 @@
+//DifferentSquares
+function solution(matrix) {
+    let obj = {};
+    for (let i = 0; i < matrix.length - 1; i++) {
+        for (let x = 0; x < matrix[i].length - 1; x++) {
+            let str = matrix[i][x].toString() + matrix[i][x+1].toString() + matrix[i+1][x].toString() + matrix[i+1][x+1].toString();
+            obj[str] = 1;
+        }
+    }
+    return Object.keys(obj).length
+}
+
 // rotateImage
 function solution(a) {
     const newImage = []
