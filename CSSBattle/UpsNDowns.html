@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ups N Downs</title>
+  <style>
+    body {
+      background: #62306D;
+      margin: 3.1rem;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .col {
+      flex-basis: calc(100%/3);
+    }
+
+    div:nth-child(even) {
+      width: 100px;
+      height: 100px;
+      background: #F7EC7D;
+    }
+
+    div:nth-child(2) {
+      border-radius: 100% 100% 0 0
+    }
+
+    div:nth-child(n+4) {
+      border-radius: 0 0 100% 100%
+    }
+
+    div:nth-child(odd) {
+      background: #62306D;
+    }
+  </style>
+</head>
+<body>
+  <div class='row'>
+    <div class='col'></div>
+    <div class='col'></div>
+    <div class='col'></div>
+    <div class='col'></div>
+    <div class='col'></div>
+    <div class='col'></div>
+  </div>
+</body>
+</html>
