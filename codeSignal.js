@@ -1,3 +1,26 @@
+//digitsProduct
+function solution(product) {
+    let num = '';
+    let newProd = product
+    if (product === 0) {
+        return 10
+    }
+    if (product === 1) {
+        return 1
+    }
+    for (let i = 9; i > 1; i--) {
+        if (newProd % i === 0) {
+            num = i.toString() + num;
+            newProd = newProd/i
+            i = 10
+        }
+    }
+    if (!num || newProd !== 1) {
+        return -1
+    }
+    return Number(num);
+}
+
 //DifferentSquares
 function solution(matrix) {
     let obj = {};
