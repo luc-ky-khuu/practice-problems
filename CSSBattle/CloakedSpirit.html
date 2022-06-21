@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloaked Spirit</title>
+  <style>
+    body {
+      background-color: #62306D;
+      position: relative;
+      margin: 0;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+    }
+
+    div {
+      position: absolute;
+    }
+
+    .main {
+      width: 300px;
+      height: 100px;
+      background: #F7EC7D;
+      bottom: 0;
+    }
+
+    .mid {
+      width: 100px;
+      height: 200px;
+      background-color: #F7EC7D;
+      bottom: 0;
+    }
+
+    .circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      top: -50
+    }
+
+    .red {
+      background-color: #E38F66;
+      border: 20px #AA445F solid;
+    }
+
+    .orange {
+      background-color: #AA445F;
+      border: 20px #E38F66 solid;
+    }
+
+    .right {
+      right: 0;
+    }
+  </style>
+</head>
+<body class='row'>
+  <div class='main'>
+    <div class='red circle'></div>
+    <div class='red circle right'></div>
+  </div>
+  <div class='mid'>
+    <div class='circle orange'></div>
+  </div>
+</body>
+</html>
