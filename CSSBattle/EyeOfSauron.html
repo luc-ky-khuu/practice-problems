@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eye of Sauron</title>
+  <style>
+    body {
+      background-color: #191210;
+      margin: 0;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .circle {
+      border-radius: 100%;
+    }
+
+    .mid {
+      width: 50px;
+      height: 50px;
+      background: #84271C;
+    }
+
+    .outer {
+      border: 20px solid #ECA03D;
+      padding: 25px;
+      position: absolute;
+    }
+
+    .edge {
+      border: 20px solid #ECA03D;
+      width: 60px;
+      height: 60px;
+      border-top-color: #191210;
+      border-left-color: #191210
+    }
+
+    .left {
+      transform: rotate(45deg);
+      position: absolute;
+      left: 50
+    }
+
+    .right {
+      position: absolute;
+      right: 50;
+      transform: rotate(225deg);
+    }
+  </style>
+
+</head>
+<body class='row'>
+  <div class='edge circle left'></div>
+  <div class='edge circle right'></div>
+  <div class='outer circle'>
+    <div class='mid circle'></div>
+  </div>
+  <body>
+</html>
