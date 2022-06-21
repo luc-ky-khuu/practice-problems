@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: #6592CF;
+      margin: 0;
+    }
+
+    div.row>div {
+      position: absolute;
+    }
+
+    .base {
+      background: #060F55;
+      height: 140px;
+      width: 140px;
+      bottom: 50;
+      border-radius: 0 0 50% 50%;
+    }
+
+    .row {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .blue-prong,
+    .tip {
+      background-color: #060F55;
+      width: 20px;
+      height: 80px;
+      top: 70;
+    }
+
+    .light-blue-prong,
+    .light-tip {
+      background-color: #6592CF;
+      width: 20px;
+      height: 80px;
+      top: 70;
+    }
+
+    .left {
+      left: 150;
+    }
+
+    .right {
+      left: 230;
+    }
+
+    .light-tip {
+      position: absolute;
+      border-radius: 0 0100% 100%;
+      height: 20px;
+    }
+
+    .tip {
+      position: absolute;
+      border-radius: 100% 100% 0 0;
+      height: 20px;
+      top: -20;
+    }
+
+    .one {
+      left: 130;
+    }
+
+    .two {
+      left: 170;
+    }
+
+    .three {
+      left: 210;
+    }
+
+    .four {
+      left: 250;
+    }
+
+    .bottom {
+      top: 240;
+    }
+  </style>
+</head>
+<body>
+  <div class='row'>
+    <div class='base'></div>
+    <div class='blue-prong bottom'></div>
+    <div class='blue-prong one'>
+      <div class='tip'></div>
+    </div>
+    <div class='blue-prong two'>
+      <div class='tip'></div>
+    </div>
+    <div class='blue-prong three'>
+      <div class='tip'></div>
+    </div>
+    <div class='blue-prong four'>
+      <div class='tip'></div>
+    </div>
+    <div class='light-blue-prong left'>
+      <div class='light-tip'></div>
+    </div>
+    <div class='light-blue-prong'>
+      <div class='light-tip'></div>
+    </div>
+    <div class='light-blue-prong right'>
+      <div class='light-tip'></div>
+    </div>
+  </div>
+</body>
+</html>
