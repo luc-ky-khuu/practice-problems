@@ -1,3 +1,22 @@
+//messageFromBinaryCode
+function solution(code) {
+    let newCode = code;
+    const arr = [];
+    const dec = [];
+    let str = '';
+    while (newCode) {
+        arr.push(newCode.slice(0,8))
+        newCode = newCode.slice(8)
+    }
+    for (let i = 0; i < arr.length; i++) {
+        const num = parseInt(arr[i], 2);
+        const letter = String.fromCharCode(num);
+        str += letter
+    }
+    return str
+}
+
+
 //File Naming
 function solution(names) {
     const obj = {};
