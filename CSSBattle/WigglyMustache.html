@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wiggly Mustache</title>
+  <style>
+    body {
+      background-color: #F5D6B4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .circle {
+      position: absolute;
+      transform: rotate(45deg);
+      border-radius: 100%;
+      border: 20px solid #D86F45;
+      border-color: #D86F45 transparent transparent #D86F45
+    }
+
+    .left {
+      transform: rotate(225deg);
+      left: 70
+    }
+
+    .right {
+      transform: rotate(225deg);
+      right: 70
+    }
+
+    .center {
+      width: 60px;
+      height: 60px;
+      background-color: #F5D6B4;
+      border-radius: 100%;
+    }
+
+    .tip {
+      width: 20px;
+      height: 20px;
+      background-color: #D86F45;
+      border-radius: 100%;
+      position: absolute;
+    }
+
+    .right-tip {
+      right: 70;
+    }
+
+    .left-tip {
+      left: 70
+    }
+  </style>
+</head>
+<body class='row'>
+  <div class='tip left-tip'></div>
+  <div class='tip right-tip'></div>
+  <div class='circle'>
+    <div class='center'></div>
+  </div>
+  <div class='circle left'>
+    <div class='center'></div>
+  </div>
+  <div class='circle right'>
+    <div class='center'></div>
+  </div>
+</body>
+</html>
