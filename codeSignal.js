@@ -1,3 +1,29 @@
+//File Naming
+function solution(names) {
+    const obj = {};
+    const arr = [];
+    for (let i = 0; i < names.length; i++) {
+        if (obj[names[i]]) {
+            if (arr.indexOf(names[i] + `(${obj[names[i]]})`) > -1) {
+                while (arr.indexOf(names[i] + `(${obj[names[i]]})`) > -1) {
+                    obj[names[i]] += 1;
+                }
+                arr.push(names[i] + `(${obj[names[i]]})`);
+            } else {
+                arr.push(names[i] + `(${obj[names[i]]})`)
+                obj[names[i]] = obj[names[i]] + 1;
+            }
+        } else if (arr.indexOf(names[i]) > -1) {
+            obj[names[i]] = 1;
+            arr.push(names[i] + `(${obj[names[i]]})`)
+        } else {
+            arr.push(names[i])
+            obj[names[i]] = 1;
+        }
+    }
+return arr
+}
+
 //digitsProduct
 function solution(product) {
     let num = '';
