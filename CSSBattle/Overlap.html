@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overlap</title>
+  <style>
+    body {
+      background-color: #09042A;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    div {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      border-radius: 100%;
+    }
+
+    .purple {
+      left: 75;
+      background: #7B3F61;
+    }
+
+    .peach {
+      right: 75;
+      background-color: #E78481;
+    }
+
+    .middle {
+      background-color: #09042A;
+      border-radius: 95% 0;
+      transform: rotate(-45deg);
+      width: 80px;
+      height: 80px;
+    }
+  </style>
+</head>
+<body>
+  <div class='purple'></div>
+  <div class='peach'></div>
+  <div class='middle'></div>
+</body>
+</html>
